@@ -1,5 +1,10 @@
 {
-  "name": "todo-tray",
+  "name": "backend-challenge",
+  "author": {
+    "name": "João Vitor Pessoa",
+    "email": "joaovitorpessoa81@gmail.com",
+    "url": "https://github.com/joaovitorpessoa"
+  },
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
