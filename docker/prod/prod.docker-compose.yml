@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: api
+    build:
+      context: ../..
+      dockerfile: docker/prod/api.prod.dockerfile
+    ports:
+      - ${HTTP_PORT}:4000
