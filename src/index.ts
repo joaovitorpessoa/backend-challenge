@@ -2,4 +2,6 @@ function test() {
   return { a: 10 };
 }
 
-test();
+console.log(test());
+
+export default test();
