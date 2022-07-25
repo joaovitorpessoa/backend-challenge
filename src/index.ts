@@ -1,3 +1,5 @@
 function test() {
-  return 0;
+  return { a: 10 };
 }
+
+test();
