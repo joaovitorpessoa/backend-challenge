@@ -2,7 +2,7 @@
 
 This repo contains the code for an api that resolves the following problem:
 
-> There's a landing page with a simple form, by default, the page will only have a simple form. Users can submit this form and the backend will receives this data and saves it in a database.
+> There's a landing page with a simple form, by default, the page will only have a simple form. Users can submit this form and the backend will receives this data, validaet and saves it in a database.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ npm run start:dev-database
 npm run build
 ```
 
-- If is the first running the container, will be needed run migrations:
+- If is the first time running the container, will be needed run migrations:
 
 ```sh
 npm run migrate
@@ -52,10 +52,8 @@ npm run start:dev
 
 ## Architecture Details
 
-This app commonly uses some design patterns like Adapter, Singleton and Decorator.
-Furthermore, is much used the Dependency Inversion Principle from SOLID and others concepts described by hexagonal and clean architecture.
-Highly recommend check the reference <a href="#-References">section</a> if you are not familiar with this ideas.
-Beside that, always prefer use path mapping with imports like `@layer/file.ts`.
+This app commonly uses some design patterns like Adapter, Singleton and Decorator; is much used the Dependency Inversion Principle from SOLID and others concepts described by hexagonal and clean architecture.
+If you are not familiar with this ideas, highly recommend check the reference <a href="#references">section</a> .
 
 ### Example of Ports and Adapter concept with the Clean Arch
 
@@ -63,18 +61,18 @@ Beside that, always prefer use path mapping with imports like `@layer/file.ts`.
 
 ## Main libraries functionality resume
 
-- ts-jest: a runtime like `ts-node` used under the hood by jest
-- dotenv: map dotenv configs to `process.env` javascript's global object
-- express: minimalist and not opinionated web framework
-- pg: postgreSQL driver used under the hood by ORM
-- tsyringe: dependency injection library
-- typeorm: ORM
-- uuid: uuid library used by an uuid adapter
-- jest: testing framework
-- tsc-watch: wrapper of `tsc` CLI to trigger scripts by events like "onSuccessful"
-- tsc-alias: library to transpile the path mapping of typescript
-- eslint: linter
-- prettier: code formatter
+- **ts-jest**: a runtime like `ts-node` used under the hood by jest
+- **dotenv**: map dotenv configs to `process.env` javascript's global object
+- **express**: minimalist and not opinionated web framework
+- **pg**: postgreSQL driver used under the hood by ORM
+- **tsyringe**: dependency injection library
+- **typeorm**: ORM currently used
+- **uuid**: uuid library used by an uuid adapter
+- **jest**: testing framework
+- **tsc-watch**: wrapper of `tsc` CLI to trigger scripts by events like "onSuccessful"
+- **tsc-alias**: library to transpile the path mapping of typescript
+- **eslint**: linter
+- **prettier**: code formatter
 
 ## Contributing to the project
 
@@ -82,19 +80,26 @@ Husky improves the development blocking commits without:
 
 - Lint
 - Format
-- Broken tests
-  Don't force commits with `no-verify` flag;
+- Passing tests
+
+Others tip to maintain the quality of project:
+
+- Don't force commits with `no-verify` flag
+- Always prefer use the typescript path mapping with imports like @layer/file.ts.
+- Don't break dependency rule between architecture layers
 
 ### Writing tests
 
-This project use [Jest](https://jestjs.io/)
+This project uses [Jest](https://jestjs.io/) as testing framework.
 
 - Tests are specified with this pattern: `**/*.spec.ts`
 - You can setup more settings in `jest.config.ts`
 
 ### Documenting UML diagrams
 
-This project uses PlantUML as main diagram tool, so the code and output image should be centralized when possible in the `docs/diagram` folder
+This project uses PlantUML as main diagram tool, so the code and output image should be centralized when possible in the `docs/diagram` folder.
+Example of feature design:
+![](docs/diagrams/create-question.png)
 
 ## Running the production version
 
