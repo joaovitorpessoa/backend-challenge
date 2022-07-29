@@ -1,0 +1,8 @@
+@startuml CreateQuestion
+actor Client
+Client -> ExpressServer: [POST] /faq
+ExpressServer -> ExpressController: QuestionSchema
+ExpressController -> ApplicationUseCase
+ApplicationUseCase -> QuestionRepository: CreateQuestionDTO
+ExpressController -> ExpressServer : StatusCode Response
+@enduml

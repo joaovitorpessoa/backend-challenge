@@ -1,0 +1,117 @@
+_type: export
+__export_format: 4
+__export_date: 2022-07-29T02:11:23.104Z
+__export_source: insomnia.desktop.app:v2022.1.1
+resources:
+  - _id: req_aeea8ce8a383424f8fec3f4ebebbc314
+    parentId: wrk_8dc811fbedb34559b3a09d39552bc0b2
+    modified: 1659060491916
+    created: 1659041124108
+    url: "{{ _.base_url }}/faq"
+    name: List questions
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_499039776e39404fb6428b92d1e179ec
+        name: page
+        value: "1"
+        description: ""
+        disabled: true
+      - id: pair_1757248de39f4cc2a2095c66bd987664
+        name: limit
+        value: "2"
+        description: ""
+        disabled: true
+    headers: []
+    authentication: {}
+    metaSortKey: -1659041124108
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_8dc811fbedb34559b3a09d39552bc0b2
+    parentId: null
+    modified: 1659001365293
+    created: 1659001365293
+    name: Duo
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_134ffe2b02ab471ea3b307fd23da68e9
+    parentId: wrk_8dc811fbedb34559b3a09d39552bc0b2
+    modified: 1659060486973
+    created: 1659001372292
+    url: "{{ _.base_url }}/faq"
+    name: Create question
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "João Vitor",
+        	"phone": "991220630",
+        	"subject": "Assunto",
+        	"message": "Mensagem",
+        	"email": "joaovitorpessoa81@gmail.com"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_77b6e66e09314baab358a9b7f3d1b2dd
+    authentication: {}
+    metaSortKey: -1659001372292
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_47f65717ce4e320fa05e72ab4f252e9cdaa5db8f
+    parentId: wrk_8dc811fbedb34559b3a09d39552bc0b2
+    modified: 1659060622468
+    created: 1659001365317
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1659001365317
+    _type: environment
+  - _id: jar_47f65717ce4e320fa05e72ab4f252e9cdaa5db8f
+    parentId: wrk_8dc811fbedb34559b3a09d39552bc0b2
+    modified: 1659001365319
+    created: 1659001365319
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_5030edac0afb4fbc8afa99baddee4d81
+    parentId: wrk_8dc811fbedb34559b3a09d39552bc0b2
+    modified: 1659001365305
+    created: 1659001365305
+    fileName: Duo
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_eb9098d3aa4c43d9abd731f769fc248d
+    parentId: env_47f65717ce4e320fa05e72ab4f252e9cdaa5db8f
+    modified: 1659060619582
+    created: 1659060353751
+    name: Dev
+    data:
+      base_url: https://localhost:4000
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1659060353751
+    _type: environment
