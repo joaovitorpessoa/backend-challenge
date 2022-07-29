@@ -10,7 +10,11 @@
     "resolveJsonModule": true,
     "baseUrl": "src",
     "paths": {
-      "@shared/*": ["shared/*"]
+      "@shared/*": ["shared/*"],
+      "@features/*": ["features/*"],
+      "@domain/*": ["domain/*"],
+      "@infra/*": ["infra/*"],
+      "@/*": ["*"]
     }
   },
   "exclude": ["jest.config.ts", "**/*.spec.ts"]

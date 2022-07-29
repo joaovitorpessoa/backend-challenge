@@ -1,4 +1,16 @@
 {
-  "cSpell.words": ["João", "Pessoa", "Vitor"],
-  "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+  "cSpell.words": [
+    "João",
+    "Pessoa",
+    "tsyringe",
+    "typeorm",
+    "usecase",
+    "usecases",
+    "Vitor"
+  ],
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "jebbs.plantuml"
+  ]
 }

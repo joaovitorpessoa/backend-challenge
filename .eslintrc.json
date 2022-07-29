@@ -1,6 +1,6 @@
 {
   "env": {
-    "browser": true,
+    "browser": false,
     "es2021": true
   },
   "extends": [
@@ -15,6 +15,16 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "quotes": [2, "double", { "avoidEscape": true }]
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "object-curly-newline": "off",
+    "lines-between-class-members": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "comma-dangle": "off",
+    "indent": "off",
+    "consistent-return": "off",
+    "operator-linebreak": "off"
   }
 }
