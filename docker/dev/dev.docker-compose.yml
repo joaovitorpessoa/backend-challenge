@@ -1,29 +1,18 @@
 version: "3.7"
 
 services:
-  api:
-    container_name: api
-    build:
-      context: ../..
-      dockerfile: docker/dev/api.dev.dockerfile
+  database:
+    image: postgres:14
+    container_name: database
     ports:
-      - ${HTTP_PORT}:4000
-    # depends_on:
-    #   - database
+      - ${POSTGRES_PORT}:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB_NAME}
     volumes:
-      - ../../:/usr/app/api
+      - pgdata:/data/postgres
 
-  # database:
-  #   image: postgres:14
-  #   container_name: database
-  #   ports:
-  #     - ${POSTGRES_PORT}:5432
-  #   environment:
-  #     - POSTGRES_USER=${POSTGRES_USER}
-  #     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-  #     - POSTGRES_DB=${POSTGRES_DB_NAME}
-  #   volumes:
-  #     - pgdata:/data/postgres
-# volumes:
-#   pgdata:
-#     driver: local
+volumes:
+  pgdata:
+    driver: local

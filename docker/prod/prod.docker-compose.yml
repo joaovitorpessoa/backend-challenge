@@ -7,4 +7,25 @@ services:
       context: ../..
       dockerfile: docker/prod/api.prod.dockerfile
     ports:
-      - ${HTTP_PORT}:4000
+      - ${HTTP_PORT}:${HTTP_PORT}
+    depends_on:
+      - database
+    command: >
+      sh -c "npm run migrate &&
+             npm run start:prod"
+
+  database:
+    image: postgres:14
+    container_name: database
+    ports:
+      - ${POSTGRES_PORT}:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB_NAME}
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local

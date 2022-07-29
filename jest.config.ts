@@ -13,4 +13,9 @@ export default {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: "<rootDir>/src/",
   }),
+  modulePathIgnorePatterns: [
+    "dist/*",
+    "docker/*",
+    "docs/*",
+  ],
 };
