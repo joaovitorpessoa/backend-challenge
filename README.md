@@ -53,7 +53,7 @@ npm run start:dev
 ## Architecture Details
 
 This app commonly uses some design patterns like Adapter, Singleton and Decorator; is much used the Dependency Inversion Principle from SOLID and others concepts described by hexagonal and clean architecture.
-If you are not familiar with this ideas, highly recommend check the reference <a href="#references">section</a> .
+If you are not familiar with this ideas, highly recommend check the reference <a href="#reference">section</a>
 
 ### Example of Ports and Adapter concept with the Clean Arch
 
