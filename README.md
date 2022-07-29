@@ -38,7 +38,7 @@ npm run start:dev-database
 npm run build
 ```
 
-- If is the first running the container, will be needed run migrations:
+- If is the first time running the container, will be needed run migrations:
 
 ```sh
 npm run migrate
@@ -82,8 +82,9 @@ Husky improves the development blocking commits without:
 
 - Lint
 - Format
-- Broken tests
-  Don't force commits with `no-verify` flag;
+- Passing tests
+
+Don't force commits with `no-verify` flag;
 
 ### Writing tests
 
