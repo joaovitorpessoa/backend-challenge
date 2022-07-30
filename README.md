@@ -87,6 +87,18 @@ Others tips to maintain the quality of project:
 - Don't force commits with `no-verify` flag
 - Always prefer use the typescript path mapping with imports like @layer/file.ts
 - Don't break dependency rule between architecture layers
+- Follow the commit messages with prefix convention:
+
+| Prefix   | Prefix meaning             | When to use                                                                                                   |
+| -------- | -------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| feat     | Features                   | A new feature                                                                                                 |
+| fix      | Bug Fixes                  | A bug fix                                                                                                     |
+| docs     | Docume­ntation             | Docume­ntation only changes                                                                                   |
+| refactor | Code Refact­oring          | A code change that neither fixes a bug nor adds a feature                                                     |
+| perf     | Perfor­mance Improv­ements | A code change that improves perfor­mance                                                                      |
+| test     | Tests                      | Adding missing tests or correcting existing tests                                                             |
+| build    | Builds                     | Changes that affect the build system or external depend­encies (example scopes: gulp, broccoli, npm)          |
+| ci       | Continuous Integr­ations   | Changes to our CI config­uration files and scripts (example scopes, Travis, Circle, Browse­rStack, SauceLabs) |
 
 ### Writing tests
 
