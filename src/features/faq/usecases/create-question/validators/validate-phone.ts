@@ -1,4 +1,4 @@
-import InvalidField from "@features/faq/errors/invalid-field";
+import InvalidField from "../errors/invalid-field";
 
 const phoneRgx = /^[0-9]{9}$/;
 

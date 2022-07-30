@@ -1,6 +1,6 @@
-import InvalidField from "../../../errors/invalid-field";
-import validateName from "./validate-name";
-import { NAME_MAX_LENGTH } from "./validators.const";
+import InvalidField from "../../errors/invalid-field";
+import validateName from "../validate-name";
+import { NAME_MAX_LENGTH } from "../validators.const";
 
 describe("validateName", () => {
   it("SHOULD return an array with invalid field error", () => {

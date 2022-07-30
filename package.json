@@ -20,6 +20,7 @@
     "tsc-watch-on-success": "npm run resolve-path-mapping && npm run start:prod",
     "watch-test": "jest --watch",
     "migrate": "typeorm migration:run --dataSource dist/infra/orm/typeorm/cli/database-connection.js",
+    "premigrate": "npm run build",
     "test": "jest",
     "prepare": "husky install",
     "format": "prettier --write .",

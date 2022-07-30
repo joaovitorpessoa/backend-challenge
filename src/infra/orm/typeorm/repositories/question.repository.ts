@@ -1,7 +1,7 @@
 import { DataSource, Repository } from "typeorm";
 import { container } from "tsyringe";
 
-import CreateQuestionDTO from "@features/faq/dto/create-question.dto";
+import CreateQuestionDTO from "@features/faq/repositories/dto/create-question.dto";
 import QuestionRepository from "@features/faq/repositories/question.repository";
 import injectionTokens from "@shared/constants/injection-tokens.const";
 import QuestionEntity from "../entities/question.entity";
@@ -11,7 +11,7 @@ class QuestionRepositoryTypeorm implements QuestionRepository {
   private repository: Repository<QuestionEntity>;
 
   constructor() {
-    this.dataSource = container.resolve(injectionTokens.DATA_SOURCE);
+    this.dataSource = container.resolve(injectionTokens.DATABASE_CONNECTION);
     this.repository = this.dataSource.getRepository(QuestionEntity);
   }
 
@@ -20,7 +20,7 @@ class QuestionRepositoryTypeorm implements QuestionRepository {
     await this.repository.save(question);
   }
 
-  async findAll(): Promise<object[]> {
+  async findAll(): Promise<QuestionEntity[]> {
     const allQuestions = await this.repository.find();
     return allQuestions;
   }

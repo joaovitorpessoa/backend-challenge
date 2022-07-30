@@ -1,4 +1,4 @@
-import InvalidField from "@features/faq/errors/invalid-field";
+import InvalidField from "@features/faq/usecases/create-question/errors/invalid-field";
 import { SUBJECT_MAX_LENGTH } from "./validators.const";
 
 function validateSubject(subject: string) {

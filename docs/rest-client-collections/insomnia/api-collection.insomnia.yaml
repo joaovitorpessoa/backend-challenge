@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2022-07-29T02:11:23.104Z
+__export_date: 2022-07-30T02:36:23.626Z
 __export_source: insomnia.desktop.app:v2022.1.1
 resources:
   - _id: req_aeea8ce8a383424f8fec3f4ebebbc314
@@ -44,7 +44,7 @@ resources:
     _type: workspace
   - _id: req_134ffe2b02ab471ea3b307fd23da68e9
     parentId: wrk_8dc811fbedb34559b3a09d39552bc0b2
-    modified: 1659060486973
+    modified: 1659148468374
     created: 1659001372292
     url: "{{ _.base_url }}/faq"
     name: Create question
@@ -58,7 +58,7 @@ resources:
         	"phone": "991220630",
         	"subject": "Assunto",
         	"message": "Mensagem",
-        	"email": "joaovitorpessoa81@gmail.com"
+        	"email": "joaovitorpess@oa81@gmail.com"
         }
     parameters: []
     headers:
@@ -103,15 +103,15 @@ resources:
     _type: api_spec
   - _id: env_eb9098d3aa4c43d9abd731f769fc248d
     parentId: env_47f65717ce4e320fa05e72ab4f252e9cdaa5db8f
-    modified: 1659060619582
+    modified: 1659148505676
     created: 1659060353751
     name: Dev
     data:
-      base_url: https://localhost:4000
+      base_url: http://localhost:4000
     dataPropertyOrder:
       "&":
         - base_url
-    color: null
+    color: "#0109f4"
     isPrivate: false
     metaSortKey: 1659060353751
     _type: environment

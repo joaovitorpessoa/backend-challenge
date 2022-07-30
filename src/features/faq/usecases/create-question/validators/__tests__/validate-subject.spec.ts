@@ -1,6 +1,6 @@
-import InvalidField from "../../../errors/invalid-field";
-import validateSubject from "./validate-subject";
-import { SUBJECT_MAX_LENGTH } from "./validators.const";
+import InvalidField from "../../errors/invalid-field";
+import validateSubject from "../validate-subject";
+import { SUBJECT_MAX_LENGTH } from "../validators.const";
 
 describe("validateSubject", () => {
   it("SHOULD return an array with invalid field error", () => {

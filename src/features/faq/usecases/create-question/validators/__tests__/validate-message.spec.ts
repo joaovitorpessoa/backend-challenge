@@ -1,6 +1,6 @@
-import InvalidField from "../../../errors/invalid-field";
-import validateMessage from "./validate-message";
-import { MESSAGE_MAX_LENGTH } from "./validators.const";
+import InvalidField from "../../errors/invalid-field";
+import validateMessage from "../validate-message";
+import { MESSAGE_MAX_LENGTH } from "../validators.const";
 
 describe("validateMessage", () => {
   it("SHOULD return an array with invalid field error", () => {

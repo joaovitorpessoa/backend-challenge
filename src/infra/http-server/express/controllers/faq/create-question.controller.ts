@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
+
 import CreateQuestionUseCase from "@features/faq/usecases/create-question/create-question.usecase";
 
 class CreateQuestionController {

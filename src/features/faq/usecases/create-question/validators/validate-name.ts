@@ -1,4 +1,4 @@
-import InvalidField from "@features/faq/errors/invalid-field";
+import InvalidField from "../errors/invalid-field";
 import { NAME_MAX_LENGTH } from "./validators.const";
 
 const nameRgx =

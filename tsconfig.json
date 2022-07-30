@@ -13,8 +13,7 @@
       "@shared/*": ["shared/*"],
       "@features/*": ["features/*"],
       "@domain/*": ["domain/*"],
-      "@infra/*": ["infra/*"],
-      "@/*": ["*"]
+      "@infra/*": ["infra/*"]
     }
   },
   "exclude": ["jest.config.ts", "**/*.spec.ts"]

@@ -1,5 +1,5 @@
-import InvalidField from "../../../errors/invalid-field";
-import validateEmail from "./validate-email";
+import InvalidField from "../../errors/invalid-field";
+import validateEmail from "./../validate-email";
 
 describe("validateEmail", () => {
   it("SHOULD return an array with invalid field error", () => {

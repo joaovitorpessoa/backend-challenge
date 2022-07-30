@@ -1,4 +1,4 @@
-import InvalidField from "@features/faq/errors/invalid-field";
+import InvalidField from "../errors/invalid-field";
 
 const emailRgx =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;

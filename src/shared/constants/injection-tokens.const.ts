@@ -1,4 +1,4 @@
 export default {
-  DATA_SOURCE: "DataSource",
-  QUESTION_REPOSITORY: "QuestionRepository",
+  DATABASE_CONNECTION: "database_connection",
+  QUESTION_REPOSITORY: "question_repository",
 };

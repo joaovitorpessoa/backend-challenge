@@ -2,9 +2,9 @@ import { inject, injectable } from "tsyringe";
 
 import QuestionRepository from "@features/faq/repositories/question.repository";
 import injectionTokens from "@shared/constants/injection-tokens.const";
-import InvalidQuestion from "@features/faq/errors/invalid-question";
-import CreateQuestion from "@features/faq/interfaces/create-question";
 import validateQuestion from "./validators/validate-question";
+import InputBoundary from "./boundaries/create-question.input-boundary";
+import InvalidQuestion from "./errors/invalid-question";
 
 @injectable()
 class CreateQuestionUseCase {
@@ -17,7 +17,7 @@ class CreateQuestionUseCase {
     this.repository = repository;
   }
 
-  async execute(data: CreateQuestion) {
+  async execute(data: InputBoundary): Promise<void> {
     const errors = validateQuestion(data);
 
     if (errors.length) {

@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 
 import QuestionRepository from "@features/faq/repositories/question.repository";
 import injectionTokens from "@shared/constants/injection-tokens.const";
+import OutputBoundary from "./boundaries/list-questions.output-boundary";
 
 @injectable()
 class ListQuestionsUseCase {
@@ -14,7 +15,7 @@ class ListQuestionsUseCase {
     this.repository = repository;
   }
 
-  async execute() {
+  async execute(): Promise<OutputBoundary> {
     const allQuestions = await this.repository.findAll();
     return allQuestions;
   }

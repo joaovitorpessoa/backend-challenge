@@ -1,4 +1,4 @@
-interface CreateQuestion {
+interface CreateQuestionInputBoundary {
   name: string;
   phone: string;
   email: string;
@@ -6,4 +6,4 @@ interface CreateQuestion {
   message: string;
 }
 
-export default CreateQuestion;
+export default CreateQuestionInputBoundary;

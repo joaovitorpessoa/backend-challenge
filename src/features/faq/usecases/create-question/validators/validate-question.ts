@@ -1,4 +1,4 @@
-import CreateQuestion from "@features/faq/interfaces/create-question";
+import CreateQuestion from "../boundaries/create-question.input-boundary";
 import validateEmail from "./validate-email";
 import validateMessage from "./validate-message";
 import validateName from "./validate-name";

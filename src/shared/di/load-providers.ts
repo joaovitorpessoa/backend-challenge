@@ -1,6 +1,6 @@
-import databaseProvider from "@infra/orm/typeorm/database/database.provider";
-import faqProvider from "@features/faq/faq.provider";
-import Provider from "./interfaces/provider";
+import databaseProvider from "@infra/orm/typeorm/database/database.di-provider";
+import faqProvider from "@features/faq/faq.di-provider";
+import Provider from "../types/di-provider";
 
 const providers: Provider[] = [databaseProvider, faqProvider];
 
