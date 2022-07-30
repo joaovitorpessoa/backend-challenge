@@ -2,7 +2,7 @@
 
 This repo contains the code for an api that resolves the following problem:
 
-> There's a landing page with a simple form, by default, the page will only have a simple form. Users can submit this form and the backend will receives this data, validaet and saves it in a database.
+> There's a landing page with a simple form, by default, the page will only have this simple form. Users can submit the form and the backend will receive this data, validate and saves it in a database.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ You must have installed and configured in your machine the following resources:
 
 ## Running local application (development)
 
-- Setup the `.env` copying the respective dotenv file (dev or prod);
+- Setup the `.env` copying the respective dotenv file (dev)
 
 ```sh
 cp ./docs/dotenv/.env.dev .env
@@ -52,12 +52,12 @@ npm run start:dev
 
 ## Architecture Details
 
-This app commonly uses some design patterns like Adapter, Singleton and Decorator; is much used the Dependency Inversion Principle from SOLID and others concepts described by hexagonal and clean architecture.
-If you are not familiar with this ideas, highly recommend check the reference <a href="#reference">section</a>
+This app commonly uses some design patterns like Adapter, Singleton and Decorator. Also, is much used the Dependency Inversion Principle from SOLID and others concepts described by hexagonal and clean architecture.
+If you are not familiar with this ideas, highly recommend check out the reference <a href="#reference">section</a>.
 
 ### Example of Ports and Adapter concept with the Clean Arch
 
-![](docs/diagrams/hexagonal-arch.png)
+<img src="docs/diagrams/hexagonal-arch.png" width="697px" height="320px" >
 
 ## Main libraries functionality resume
 
@@ -82,10 +82,10 @@ Husky improves the development blocking commits without:
 - Format
 - Passing tests
 
-Others tip to maintain the quality of project:
+Others tips to maintain the quality of project:
 
 - Don't force commits with `no-verify` flag
-- Always prefer use the typescript path mapping with imports like @layer/file.ts.
+- Always prefer use the typescript path mapping with imports like @layer/file.ts
 - Don't break dependency rule between architecture layers
 
 ### Writing tests
@@ -99,17 +99,18 @@ This project uses [Jest](https://jestjs.io/) as testing framework.
 
 This project uses PlantUML as main diagram tool, so the code and output image should be centralized when possible in the `docs/diagram` folder.
 Example of feature design:
-![](docs/diagrams/create-question.png)
+
+<img src="docs/diagrams/create-question.png" width="697px" height="320px" >
 
 ## Running the production version
 
-- Setup the `.env` copying the respective dotenv file (should be the prod version);
+- Setup the `.env` copying the respective dotenv file (now should be the prod version);
 
 ```sh
 cp ./docs/dotenv/.env.prod .env
 ```
 
-- Run the container orchestrator specifying the production `docker-compose.yml`
+- Run the container orchestrator specifying the production version of `docker-compose.yml`
 
 ```sh
 docker-compose -f docker/prod/prod.docker-compose.yml up --build
@@ -117,10 +118,12 @@ docker-compose -f docker/prod/prod.docker-compose.yml up --build
 
 ## Endpoint descriptions
 
-You can use a REST client like Insomnia to make this requests. Checkout `docs/rest-client-collections/insomnia`.
+You can use a REST client like Insomnia to make this requests. Check out `docs/rest-client-collections/insomnia`.
 
-- [GET] **/faq**
-- Example of expected return
+### **/faq**
+
+- [GET] `/faq`
+- Example of expected return:
 
 ```json
 {
@@ -156,8 +159,8 @@ You can use a REST client like Insomnia to make this requests. Checkout `docs/re
 }
 ```
 
-- [GET] **/faq?page=1&limit=2**
-- Example of expected paginated return
+- [GET] `/faq?page=1&limit=2`
+- Example of expected paginated return:
 
 ```json
 {
@@ -190,7 +193,7 @@ You can use a REST client like Insomnia to make this requests. Checkout `docs/re
 }
 ```
 
-- [POST] **/faq**
+- [POST] `/faq`
 - Example of schema expected:
 
 ```json
@@ -203,8 +206,9 @@ You can use a REST client like Insomnia to make this requests. Checkout `docs/re
 }
 ```
 
-- This endpoint only returns if the status code is 400 (bad request)
-- Example of errors
+This endpoint only returns some output if the status code is 400 (bad request).
+
+- Example of errors:
 
 ```json
 {
