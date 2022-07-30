@@ -1,5 +1,6 @@
 import "express-async-errors";
 import express, { Express } from "express";
+import cors from "cors";
 
 import httpServerConfig from "@shared/config/http-server.config";
 import router from "./routes/router";
@@ -22,6 +23,7 @@ class ExpressHttpServer {
   }
 
   private registerMiddleware() {
+    this.server.use(cors());
     this.server.use(express.json());
     this.server.use(router);
 
