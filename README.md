@@ -270,6 +270,12 @@ This endpoint only returns some output if the status code is 400 (bad request).
 }
 ```
 
+## Cloud environment
+
+Currently the project uses Heroku platform with a free plan. You can access the api through this URL: https://backend-challenge-81.herokuapp.com/
+
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Backend%20Challenge&uri=https%3A%2F%2Fbackend-challenge-81.herokuapp.com%2Ffaq)
+
 ## Reference
 
 - Design patterns: https://refactoring.guru

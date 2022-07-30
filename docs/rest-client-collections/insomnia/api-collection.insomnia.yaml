@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2022-07-30T02:36:23.626Z
+__export_date: 2022-07-30T04:55:59.064Z
 __export_source: insomnia.desktop.app:v2022.1.1
 resources:
   - _id: req_aeea8ce8a383424f8fec3f4ebebbc314
@@ -44,7 +44,7 @@ resources:
     _type: workspace
   - _id: req_134ffe2b02ab471ea3b307fd23da68e9
     parentId: wrk_8dc811fbedb34559b3a09d39552bc0b2
-    modified: 1659148468374
+    modified: 1659153302962
     created: 1659001372292
     url: "{{ _.base_url }}/faq"
     name: Create question
@@ -57,8 +57,8 @@ resources:
         	"name": "João Vitor",
         	"phone": "991220630",
         	"subject": "Assunto",
-        	"message": "Mensagem",
-        	"email": "joaovitorpess@oa81@gmail.com"
+        	"message": "Mensagem2",
+        	"email": "joaovitorpessoa81@gmail.com"
         }
     parameters: []
     headers:
@@ -103,7 +103,7 @@ resources:
     _type: api_spec
   - _id: env_eb9098d3aa4c43d9abd731f769fc248d
     parentId: env_47f65717ce4e320fa05e72ab4f252e9cdaa5db8f
-    modified: 1659148505676
+    modified: 1659156902898
     created: 1659060353751
     name: Dev
     data:
@@ -114,4 +114,18 @@ resources:
     color: "#0109f4"
     isPrivate: false
     metaSortKey: 1659060353751
+    _type: environment
+  - _id: env_829779bd32e049baa06fbec7f62af7c6
+    parentId: env_47f65717ce4e320fa05e72ab4f252e9cdaa5db8f
+    modified: 1659156936629
+    created: 1659156906731
+    name: Heroku
+    data:
+      base_url: https://backend-challenge-81.herokuapp.com
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: "#ff7b00"
+    isPrivate: false
+    metaSortKey: 1659156906731
     _type: environment
