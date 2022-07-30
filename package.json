@@ -6,6 +6,9 @@
     "url": "https://github.com/joaovitorpessoa"
   },
   "version": "1.0.0",
+  "engines": {
+    "node": "16.14.2"
+  },
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
