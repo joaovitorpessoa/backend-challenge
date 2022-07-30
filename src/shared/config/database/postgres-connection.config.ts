@@ -1,6 +1,6 @@
 // port and host are static configs since database is running on same api's cluster
 
-function createPostgresConfig() {
+function createPostgresConnectionConfig() {
   const config = {
     port: 5432,
     host: "database",
@@ -17,4 +17,4 @@ function createPostgresConfig() {
   return config;
 }
 
-export default createPostgresConfig();
+export default createPostgresConnectionConfig();

@@ -2,15 +2,15 @@ import { container } from "tsyringe";
 
 import injectionTokens from "@shared/constants/injection-tokens.const";
 import DependencyInjectionProvider from "@shared/types/di-provider";
-import CreatePostgresConnection from "./postgres-connection";
+import DatabaseConnection from "./database-connection";
 
 class DatabaseProvider implements DependencyInjectionProvider {
   async register(): Promise<void> {
-    const createPostgresConnection = new CreatePostgresConnection();
-    const postgresConnection = await createPostgresConnection.init();
+    const createDatabaseConnection = new DatabaseConnection();
+    const databaseConnection = await createDatabaseConnection.init();
     container.registerInstance(
       injectionTokens.DATABASE_CONNECTION,
-      postgresConnection
+      databaseConnection
     );
   }
 }
