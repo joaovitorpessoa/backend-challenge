@@ -18,7 +18,7 @@ class ExpressHttpServer {
     this.registerMiddleware();
     this.server.listen(this.httpPort, () => {
       // eslint-disable-next-line no-console
-      console.log(`Server is running on port ${4000}!`);
+      console.log(`Server is running on port ${this.httpPort}!`);
     });
   }
 

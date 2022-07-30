@@ -1,3 +1,3 @@
 export default {
-  port: parseInt(process.env.HTTP_PORT, 10),
+  port: parseInt(process.env.PORT || process.env.HTTP_PORT, 10),
 };
