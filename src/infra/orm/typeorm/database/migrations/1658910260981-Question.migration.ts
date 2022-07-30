@@ -33,7 +33,6 @@ class Question1658910260981 implements MigrationInterface {
         {
           name: "created_at",
           type: "timestamp",
-          default: "now()",
         },
       ],
     });

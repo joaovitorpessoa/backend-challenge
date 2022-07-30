@@ -30,6 +30,9 @@ class Question implements QuestionEntity {
       const uuidGenerator = new UuidGeneratorAdapter();
       this.id = uuidGenerator.get();
     }
+    if (!this.createdAt) {
+      this.createdAt = new Date();
+    }
   }
 }
 
