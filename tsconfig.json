@@ -8,12 +8,13 @@
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "rootDir": ".",
     "paths": {
-      "@shared/*": ["shared/*"],
-      "@features/*": ["features/*"],
-      "@domain/*": ["domain/*"],
-      "@infra/*": ["infra/*"]
+      "@shared/*": ["src/shared/*"],
+      "@features/*": ["src/features/*"],
+      "@domain/*": ["src/domain/*"],
+      "@infra/*": ["src/infra/*"]
     }
   },
   "exclude": ["jest.config.ts", "**/*.spec.ts"]

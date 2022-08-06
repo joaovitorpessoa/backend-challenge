@@ -11,7 +11,7 @@ export default {
   preset: "ts-jest",
   testMatch: ["**/*.spec.ts"],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: "<rootDir>/src/",
+    prefix: "<rootDir>/",
   }),
   modulePathIgnorePatterns: ["dist/*", "docker/*", "docs/*"],
 };

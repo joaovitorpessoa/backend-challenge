@@ -26,25 +26,13 @@ cp ./docs/dotenv/.env.dev .env
 nvm install && nvm use
 ```
 
-- Raise a PostgreSQL database with docker
+- Install dependencies
 
 ```sh
-npm run start:dev-database
+npm install
 ```
 
-- Build the project
-
-```sh
-npm run build
-```
-
-- If is the first time running the container, will be needed run migrations:
-
-```sh
-npm run migrate
-```
-
-- Start api in watch mode:
+- Start project in watch (dev) mode:
 
 ```sh
 npm run start:dev
@@ -70,7 +58,7 @@ If you are not familiar with this ideas, highly recommend check out the referenc
 - **uuid**: uuid library used by an uuid adapter
 - **jest**: testing framework
 - **tsc-watch**: wrapper of `tsc` CLI to trigger scripts by events like "onSuccessful"
-- **tsc-alias**: library to transpile the path mapping of typescript
+- **tspath**: library to transpile the path mapping of typescript
 - **eslint**: linter
 - **prettier**: code formatter
 

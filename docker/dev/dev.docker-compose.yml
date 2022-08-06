@@ -1,9 +1,24 @@
 version: "3.7"
 
 services:
+  app:
+    container_name: api_dev
+    build:
+      context: ../..
+      dockerfile: docker/prod/api.prod.dockerfile
+    ports:
+      - ${HTTP_PORT}:${HTTP_PORT}
+    depends_on:
+      - database
+    volumes:
+      - ../../src:/usr/app/api/src
+    command: >
+      sh -c "npm run migrate &&
+             npm run docker:start-dev"
+
   database:
     image: postgres:14
-    container_name: database
+    container_name: database_dev
     ports:
       - ${POSTGRES_PORT}:5432
     environment:

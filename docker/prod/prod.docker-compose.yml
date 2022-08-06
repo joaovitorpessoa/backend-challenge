@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   app:
-    container_name: api
+    container_name: api_prod
     build:
       context: ../..
       dockerfile: docker/prod/api.prod.dockerfile
@@ -16,7 +16,7 @@ services:
 
   database:
     image: postgres:14
-    container_name: database
+    container_name: database_prod
     ports:
       - ${POSTGRES_PORT}:5432
     environment:

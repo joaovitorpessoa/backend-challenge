@@ -3,6 +3,8 @@
     "João",
     "Pessoa",
     "premigrate",
+    "prestart",
+    "tspath",
     "tsyringe",
     "typeorm",
     "usecase",
